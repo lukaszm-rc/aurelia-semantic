@@ -1,0 +1,24 @@
+<template>
+	<require from="./element-section.css"></require>
+	<require from="./element-card"></require>
+
+	<section class="element">
+		<h3 class="ui dividing header">
+			<ui-icon name="code outline"></ui-icon>
+			nc-${name}
+		</h3>
+
+		<div class="ui stackable mobile reversed two column grid">
+			<div class="twelve wide column">
+				<content>
+				</content>
+			</div>
+
+			<div class="four wide column">
+				<element-card></element-card>
+			</div>
+		</div>
+
+	</section>
+
+</template>
