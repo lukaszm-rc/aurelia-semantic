@@ -59,7 +59,7 @@
       "numeral": "npm:numeral@^1.5.3",
       "prism": "npm:prismjs@^1.4.1",
       "semantic-ui": "github:Semantic-Org/Semantic-UI@^2.1.8",
-      "text": "npm:text@^0.0.4"
+      "text": "npm:text@^0.1.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
