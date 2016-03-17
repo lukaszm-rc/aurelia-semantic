@@ -1,0 +1,27 @@
+<template>
+
+	<require from="./app.css"></require>
+	<require from="./demo-nav"></require>
+	<require from="./demo-footer"></require>
+
+	<!-- Sidebar Menu -->
+	<nav class="ui vertical inverted sidebar menu">
+		<a class="toc item">
+			<ui-icon name="sidebar"></ui-icon>
+		</a>
+		<div href="#" class="header item">
+			<img class="logo" src="assets/images/logo.png">
+			Aurelia Semantic UI
+		</div>
+		<a repeat.for="row of router.navigation" class="item ${row.isActive ? 'active' : ''}"
+			href.bind="row.href">${row.title}</a>
+	</nav>
+
+	<demo-nav router.bind="router"></demo-nav>
+
+	<main class="pusher">
+		<router-view></router-view>
+		<demo-footer></demo-footer>
+	</main>
+
+</template>

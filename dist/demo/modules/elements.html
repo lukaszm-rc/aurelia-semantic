@@ -1,0 +1,328 @@
+<template>
+
+    <require from="../components/element-section"></require>
+    <require from="../components/element-example"></require>
+
+    <div class="ui centered container">
+        <header>
+            <h2 class="ui header">"Element" Widgets</h2>
+        </header>
+
+        <p>These are custom elements from the "Elements" section of the Semantic
+            UI widget set.</p>
+
+        <element-section
+                name="nc-rating"
+                category="element"
+                status="incomplete"
+                types="heart, star"
+                variations="*"
+                description="Rating">
+
+            <div class="element-docs">
+                <p></p>
+            </div>
+            <div class="element-examples">
+                <h3 class="ui header">Examples</h3>
+                <element-example language="markup" caption="Rating examples">
+                    <ui-segment>
+                        <ui-rating></ui-rating>
+                        <p></p>
+                        <ui-rating type="heart"></ui-rating>
+                        <p></p>
+                        <ui-rating type="star"></ui-rating>
+                        <p></p>
+                    </ui-segment>
+                </element-example>
+                <element-example language="markup" caption="Rating examples">
+                    <ui-segment>
+                        <ui-rating max="5" value="1" size="mini" type="star" click.call="click(this)"></ui-rating>
+                    </ui-segment>
+                    <ui-segment>
+                        <ui-rating max="5" value="2" size="tiny" type="star"></ui-rating>
+
+                        <ui-rating max="5" value="3" size="small" type="star"></ui-rating>
+
+                        <ui-rating max="5" value="4" size="large" type="star"></ui-rating>
+                    </ui-segment>
+                    <ui-rating max="5" value="5" size="huge" type="star"></ui-rating>
+                    <p></p>
+                    <ui-rating max="5" value="0" size="massive" type="star"></ui-rating>
+                    <p></p>
+                    <ui-rating max="5" value="3" options='{"type":"star"}'></ui-rating>
+                    <p></p>
+                </element-example>
+            </div>
+        </element-section>
+        <element-section
+                name="nc-button"
+                category="element"
+                status="incomplete"
+                types="text, fluid, grid"
+                variations="facebook,twitter"
+                description="">
+            <div class="element-examples">
+                <h3 class="ui header">Examples</h3>
+                <element-example language="markup" caption="Various buttons">
+                    <ui-segment type="vertical">
+                        <ui-button icon="like">Like</ui-button>
+                        <ui-button icon="like" variations="primary">Like</ui-button>
+                        <p></p>
+                        <ui-button icon="bomb">Bomb</ui-button>
+                        <ui-button icon="bomb" variations="left labeled icon">Bomb</ui-button>
+                        <p></p>
+                        <ui-button icon="left arrow">Previous</ui-button>
+                        <ui-button icon="right arrow" variations="right labeled icon">Next</ui-button>
+                    </ui-segment>
+                </element-example>
+                <element-example language="markup" caption="Social buttons">
+                    <ui-segment type="vertical">
+                        <div class="ui small basic icon buttons">
+                            <ui-button icon="facebook" variations="facebook"></ui-button>
+                            <ui-button icon="twitter" variations="small twitter"></ui-button>
+                            <ui-button icon="google plus" variations="google plus"></ui-button>
+                            <ui-button icon="vk" variations="vk"></ui-button>
+                            <ui-button icon="linkedin" variations="linkedin"></ui-button>
+                            <ui-button icon="instagram" variations="instagram"></ui-button>
+                            <ui-button icon="youtube" variations="youtube"></ui-button>
+                        </div>
+                    </ui-segment>
+                </element-example>
+            </div>
+
+            <ui-segment type="vertical">
+                <div class="ui small basic icon buttons">
+                    <ui-button icon="file"></ui-button>
+                    <ui-button icon="save"></ui-button>
+                    <ui-button icon="upload"></ui-button>
+                    <ui-button icon="download"></ui-button>
+                </div>
+            </ui-segment>
+            </element-example>
+            <element-example language="markup" caption="Various states">
+                <ui-segment type="vertical">
+                    <ui-button state="disabled">disabled</ui-button>
+                    <p></p>
+                    <ui-button state="loading">loading</ui-button>
+                    <p></p>
+                    <ui-button state="active">active</ui-button>
+                </ui-segment>
+            </element-example>
+            <element-example language="markup" caption="Various header sizes">
+                <ui-segment type="vertical">
+                    <ui-button size="huge">Huge</ui-button>
+                    <p></p>
+                    <ui-button size="large">Large</ui-button>
+                    <p></p>
+                    <ui-button size="medium">Medium</ui-button>
+                    <p></p>
+                    <ui-button size="small">Small</ui-button>
+                    <p></p>
+                    <ui-button size="tiny">Tiny</ui-button>
+                    <ui-button preset="save" overides="{size: 'medium'}"></ui-button>
+                    <p></p>
+                </ui-segment>
+            </element-example>
+            <div class="element-docs">
+                <p>The <code>nc-container</code> element corresponds to the Button
+                    Semantic element.</p>
+            </div>
+
+        </element-section>
+
+        <element-section
+                name="container"
+                category="element"
+                status="incomplete"
+                types="text, fluid, grid"
+                variations="*"
+                description="A container limits content to a maximum width">
+
+            <div class="element-docs">
+                <p>The <code>nc-container</code> element corresponds to the Container
+                    Semantic element.</p>
+            </div>
+
+        </element-section>
+
+
+        <element-section
+                name="segment"
+                category="element"
+                status="incomplete"
+                types="raised, stacked, piled, vertical"
+                variations="inverted, attached, padded, compact, colored, emphasis, circular,
+				clearing, floated, text alignment, basic"
+                description="A segment is used to create a grouping of related content">
+
+            <div class="element-docs">
+                <p>The <code>nc-segment</code> element corresponds to the Segment
+                    Semantic element.</p>
+
+                <p>You can put segments in groups by wrapping them in a
+                    <code>nc-segments</code>.</p>
+            </div>
+
+        </element-section>
+
+
+        <element-section
+                name="segments"
+                category="element"
+                status="incomplete"
+                types="raised, stacked, piled, horizontal"
+                description="A group of segments can be formatted to appear together">
+
+            <div class="element-docs">
+                <p>The <code>nc-segments</code> element corresponds to the "Groups"
+                    described in the documentation of the Segment Semantic element.</p>
+            </div>
+
+        </element-section>
+
+
+        <element-section
+                name="header"
+                category="element"
+                status="incomplete"
+                types="content, icon, sub"
+                description="A header provides a short summary of content">
+
+            <div class="element-docs">
+                <p>The <code>nc-header</code> element corresponds to the "content"-type Header
+                    Semantic element.</p>
+            </div>
+
+            <div class="element-examples">
+                <h3 class="ui header">Examples</h3>
+
+                <element-example language="markup" caption="Various header sizes">
+                    <ui-segment type="vertical">
+                        <ui-header size="huge">Huge Header</ui-header>
+                        <p></p>
+                        <ui-header size="large">Large Header</ui-header>
+                        <p></p>
+                        <ui-header size="medium">Medium Header</ui-header>
+                        <p></p>
+                        <ui-header size="small">Small Header</ui-header>
+                        <p></p>
+                        <ui-header size="tiny">Tiny Header</ui-header>
+                        <p></p>
+                    </ui-segment>
+                </element-example>
+
+                <element-example language="markup" caption="Sub headers">
+                    <ui-list variations="horizontal">
+                        <ui-list-item>
+                            <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
+                            <ui-list-item-content>
+                                <ui-header variations="sub">Molly</ui-header>
+                                Coordinator
+                                </ui-liste-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <img class="ui mini circular image" src="/images/avatar2/small/elyse.png">
+                            <ui-list-item-content>
+                                <ui-header variations="sub">Elyse</ui-header>
+                                Developer
+                                </ui-liste-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <img src="/images/avatar2/small/eve.png" class="ui mini circular image">
+                            <ui-list-item-content>
+                                <ui-header variations="sub">Eve</ui-header>
+                                Project Manager
+                                </ui-liste-item-content>
+                        </ui-list-item>
+                    </ui-list>
+                </element-example>
+            </div>
+
+        </element-section>
+
+
+        <element-section
+                name="list"
+                category="element"
+                status="incomplete"
+                types="bulleted, ordered, link"
+                variations="horizontal, inverted, selection, animated, relaxed, divided, celled, size"
+                description="A list is used to group related content">
+
+            <div class="element-docs">
+                <p>The <code>nc-list</code> element corresponds to the List Semantic element.</p>
+            </div>
+
+            <div class="element-examples">
+                <h3 class="ui header">Examples</h3>
+
+                <element-example language="markup" caption="The basic list type">
+                    <ui-list>
+                        <ui-list-item>Apples</ui-list-item>
+                        <ui-list-item>Pears</ui-list-item>
+                        <ui-list-item>Oranges</ui-list-item>
+                    </ui-list>
+                </element-example>
+
+                <element-example language="markup" caption="With icons">
+                    <ui-list>
+                        <ui-list-item>
+                            <ui-icon name="users"></ui-icon>
+                            <ui-list-item-content>
+                                Semantic UI
+                            </ui-list-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <ui-icon name="marker"></ui-icon>
+                            <ui-list-item-content>
+                                New York, NY
+                            </ui-list-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <ui-icon name="mail"></ui-icon>
+                            <ui-list-item-content>
+                                <a href="mailto:jack@semantic-ui.com">jack@semantic-ui.com</a>
+                            </ui-list-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <ui-icon name="linkify"></ui-icon>
+                            <ui-list-item-content>
+                                <a href="http://www.semantic-ui.com">semantic-ui.com</a>
+                            </ui-list-item-content>
+                        </ui-list-item>
+                    </ui-list>
+                </element-example>
+
+                <element-example language="markup" caption="With more complex content">
+                    <ui-list variations="relaxed divided">
+                        <ui-list-item>
+                            <ui-icon size="large" name="github" variations="middle aligned"></ui-icon>
+                            <ui-list-item-content>
+                                <a class="header">Semantic-Org/Semantic-UI</a>
+                                <div class="description">Updated 10 mins ago</div>
+                            </ui-list-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <ui-icon size="large" name="github" variations="middle aligned"></ui-icon>
+                            <ui-list-item-content>
+                                <a class="header">Semantic-Org/Semantic-nc-Docs</a>
+                                <div class="description">Updated 22 mins ago</div>
+                            </ui-list-item-content>
+                        </ui-list-item>
+                        <ui-list-item>
+                            <ui-icon size="large" name="github" variations="middle aligned"></ui-icon>
+                            <ui-list-item-content>
+                                <a class="header">Semantic-Org/Semantic-nc-Meteor</a>
+                                <div class="description">Updated 34 mins ago</div>
+                            </ui-list-item-content>
+                        </ui-list-item>
+                    </ui-list>
+                </element-example>
+            </div>
+
+        </element-section>
+
+    </div>
+
+</template>
+

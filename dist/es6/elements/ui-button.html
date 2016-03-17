@@ -1,0 +1,6 @@
+<template>
+    <button class="ui ${variations} ${type} ${state} ${size} button" click.delegate="click($event)">
+        <ui-icon if.bind="icon" name.bind="icon"></ui-icon>
+        <content></content>
+    </button>
+</template>
