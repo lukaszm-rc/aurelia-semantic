@@ -20,14 +20,13 @@ var config = {
 			options: {
 				inject: true,
 				minify: true,
-				rev: false
+				rev: true
 			}
 		},
 		"dist/demo/vendor-build": {
 			includes: [
 				'aurelia-bootstrapper',
 				'aurelia-animator-css',
-				'jquery',
 				'semantic',
 				'semantic/semantic.css!text'
 			],
