@@ -1,67 +1,75 @@
 {
-  "name": "aurelia-ui",
-  "version": "1.0.8",
+  "name": "@etk/aurelia-ui",
+  "version": "1.0.7",
   "description": "ETK UI Aurelia plugin.",
   "keywords": [
+    "etk",
     "aurelia",
     "plugin",
     "ui"
   ],
-  "homepage": "https://github.com/lukaszm-rc/aurelia-ui-dev",
+  "homepage": "https://github.com/etk-pl/aurelia-ui",
   "bugs": {
-    "url": "https://github.com/lukaszm-rc/aurelia-ui-dev/issues"
+    "url": "https://github.com/etk-pl/aurelia-ui/issues"
   },
-  "author": "Lukasz Mazurek <lukasz.mazurek@boo.pl>",
-  "main": "dist/common/index.js",
+  "author": "ETK <info@redcart.pl>",
+  "main": "./dist/amd/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/lukaszm-rc/aurelia-ui-dev"
+    "url": "http://github.com/etk-pl/aurelia-ui"
   },
   "devDependencies": {
-    "aurelia-bundler": "^0.3.1",
-    "aurelia-tools": "^0.1.18",
+    "aurelia-bundler": "^0.3.2",
+    "aurelia-tools": "^0.1.3",
+    "babel-eslint": "^4.1.3",
     "browser-sync": "^2.11.1",
-    "conventional-changelog": "^1.0.1",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^5.3.0",
-    "gulp-bump": "^1.0.0",
-    "gulp-changed": "^1.3.0",
-    "gulp-eslint": "^1.1.1",
-    "gulp-karma": "0.0.5",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
+    "conventional-changelog": "0.0.11",
+    "del": "^1.1.0",
+    "gulp": "^3.8.10",
+    "gulp-babel": "^5.1.0",
+    "gulp-bump": "^0.1.11",
+    "gulp-eslint": "^1.0.0",
     "gulp-sourcemaps": "^1.6.0",
-    "jspm": "^0.16.27",
-    "karma": "^0.13.19",
-    "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.5",
-    "vinyl-paths": "^2.1.0"
+    "gulp-yuidoc": "^0.1.2",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.28",
+    "karma-babel-preprocessor": "^5.2.1",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coverage": "^0.3.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-jspm": "^2.0.1-beta.2",
+    "object.assign": "^1.0.3",
+    "require-dir": "^0.1.0",
+    "run-sequence": "^1.0.2",
+    "vinyl-paths": "^1.0.0",
+    "yargs": "^2.1.1"
   },
   "jspm": {
+    "registry": "npm",
+    "main": "dist/amd/index",
     "dependencies": {
-      "aurelia-animator-css": "npm:aurelia-animator-css@^1.0.0-beta.1.1.1",
-      "aurelia-binding": "npm:aurelia-binding@^1.0.0-beta.1.1.1",
-      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1.1.2",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.1.2",
-      "aurelia-logging": "npm:aurelia-logging@^1.0.0-beta.1.1.1",
-      "aurelia-metadata": "npm:aurelia-metadata@^1.0.0-beta.1.1.3",
-      "aurelia-task-queue": "npm:aurelia-task-queue@^1.0.0-beta.1.1.0",
-      "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.1.0",
-      "css": "npm:css@^2.2.1",
-      "dompurify": "npm:dompurify@^0.7.3",
-      "jquery": "npm:jquery@^2.2.0",
-      "moment": "npm:moment@^2.11.2",
-      "numeral": "npm:numeral@^1.5.3",
-      "prism": "npm:prismjs@^1.4.1",
+      "aurelia-animator-css": "^1.0.0-beta.1.1.1",
+      "aurelia-binding": "^1.0.0-beta.1.1.1",
+      "aurelia-bootstrapper": "^1.0.0-beta.1.1.2",
+      "aurelia-dependency-injection": "^1.0.0-beta.1.1.2",
+      "aurelia-logging": "^1.0.0-beta.1.1.1",
+      "aurelia-metadata": "^1.0.0-beta.1.1.3",
+      "aurelia-task-queue": "^1.0.0-beta.1.1.0",
+      "aurelia-templating": "^1.0.0-beta.1.1.0",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "dompurify": "^0.7.3",
+      "jquery": "^2.2.0",
+      "moment": "^2.11.2",
+      "numeral": "^1.5.3",
+      "prism": "prismjs@^1.4.1",
       "semantic-ui": "github:Semantic-Org/Semantic-UI@^2.1.8",
-      "text": "npm:text@^0.1.0"
+      "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "clean-css": "npm:clean-css@^3.4.9",
-      "core-js": "npm:core-js@^1.1.4"
+      "babel": "babel-core@^5.8.24",
+      "babel-runtime": "^5.8.24",
+      "clean-css": "^3.4.9",
+      "core-js": "^1.1.4"
     }
   }
 }

@@ -1,28 +1,29 @@
-/**
- * Aurelia-Semantic-UI -- Aurelia components for Semantic-UI
- * $Id$
- *
- * Authors
- * - Michael Granger <ged@FaerieMUD.org>
- */
-
+"use strict";
 import 'semantic';
 import 'semantic/semantic.css!';
-
-
 export var VERSION = '0.0.1.dev';
 
 // Aurelia plugin hook
+var _id = 0;
+window.getUid = (prefix) => {
+    prefix = prefix || "def";
+    return prefix + (++_id);
+}
+
 export function configure(config) {
-    config.globalResources( './collections/ui-breadcrumb' );
-    config.globalResources( './collections/ui-menu' );
-    config.globalResources( './elements/ui-container' );
-    config.globalResources( './elements/ui-header' );
-    config.globalResources( './elements/ui-icon' );
-    config.globalResources( './elements/ui-list' );
-    config.globalResources( './elements/ui-segment' );
-    config.globalResources( './elements/ui-segments' );
-    config.globalResources( './modules/ui-modal' );
-    config.globalResources( './views/ui-card' );
+
+
+    config.globalResources('./collections/nc-breadcrumb');
+    config.globalResources('./collections/nc-menu');
+    config.globalResources('./elements/nc-button');
+    config.globalResources('./elements/nc-container');
+    config.globalResources('./elements/nc-header');
+    config.globalResources('./elements/nc-icon');
+    config.globalResources('./elements/nc-list');
+    config.globalResources('./elements/nc-rating');
+    config.globalResources('./elements/nc-segment');
+    config.globalResources('./elements/nc-segments');
+    config.globalResources('./modules/nc-modal');
+    config.globalResources('./views/nc-card');
 }
 

@@ -1,8 +1,8 @@
 /* -*- javascript -*- */
 "use strict";
 import 'babel/polyfill';
-import 'semantic-ui';
-import 'semantic-ui/semantic.css!';
+import 'semantic';
+import 'semantic/semantic.css!';
 import {jQuery} from 'jquery';
 
 export function configure(aurelia) {

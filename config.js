@@ -13,6 +13,7 @@ System.config({
     "aurelia-ui": "dist/system/index",
     "aurelia-ui/*": "dist/system/*",
     "github:*": "jspm_packages/github/*",
+    "jquery": "jspm_packages/github/components/jquery@2.2.1",
     "npm:*": "jspm_packages/npm/*"
   },
 
@@ -29,14 +30,15 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "clean-css": "npm:clean-css@3.4.10",
     "core-js": "npm:core-js@1.2.6",
-    "css": "npm:css@2.2.1",
+    "css": "github:systemjs/plugin-css@0.1.20",
     "dompurify": "npm:dompurify@0.7.4",
     "jquery": "npm:jquery@2.2.1",
     "moment": "npm:moment@2.12.0",
     "numeral": "npm:numeral@1.5.3",
     "prism": "npm:prismjs@1.4.1",
+    "semantic": "github:Semantic-Org/Semantic-UI@2.1.8",
     "semantic-ui": "github:Semantic-Org/Semantic-UI@2.1.8",
-    "text": "npm:text@0.1.0",
+    "text": "github:systemjs/plugin-text@0.0.4",
     "github:Semantic-Org/Semantic-UI@2.1.8": {
       "css": "github:systemjs/plugin-css@0.1.20",
       "jquery": "github:components/jquery@2.2.1"
@@ -90,10 +92,6 @@ System.config({
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
-    },
-    "npm:atob@1.1.3": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:aurelia-animator-css@1.0.0-beta.1.1.2": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1.1.6",
@@ -255,14 +253,6 @@ System.config({
     "npm:core-util-is@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:css@2.2.1": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "inherits": "npm:inherits@2.0.1",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "source-map": "npm:source-map@0.1.43",
-      "source-map-resolve": "npm:source-map-resolve@0.3.1",
-      "urix": "npm:urix@0.1.0"
-    },
     "npm:domain-browser@1.1.7": {
       "events": "github:jspm/nodelibs-events@0.1.1"
     },
@@ -282,6 +272,9 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:jquery@2.2.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:moment@2.12.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -316,20 +309,6 @@ System.config({
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
     },
-    "npm:source-map-resolve@0.3.1": {
-      "atob": "npm:atob@1.1.3",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "resolve-url": "npm:resolve-url@0.2.1",
-      "source-map-url": "npm:source-map-url@0.3.0",
-      "urix": "npm:urix@0.1.0",
-      "url": "github:jspm/nodelibs-url@0.1.0"
-    },
-    "npm:source-map@0.1.43": {
-      "amdefine": "npm:amdefine@1.0.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:source-map@0.4.4": {
       "amdefine": "npm:amdefine@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -341,9 +320,6 @@ System.config({
     },
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
-    },
-    "npm:urix@0.1.0": {
-      "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

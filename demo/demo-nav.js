@@ -11,6 +11,7 @@ export class DemoNav {
 
     @bindable router;
     @bindable data;
+
     constructor(element) {
 
         this.element = element;
