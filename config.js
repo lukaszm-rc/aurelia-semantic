@@ -13,8 +13,61 @@ System.config({
     "aurelia-ui": "dist/system/index",
     "aurelia-ui/*": "dist/system/*",
     "github:*": "jspm_packages/github/*",
-    "jquery": "jspm_packages/github/components/jquery@2.2.1",
+    "jquery": "jspm_packages/github/components/jquery@2.2.2",
     "npm:*": "jspm_packages/npm/*"
+  },
+  bundles: {
+    "demo/app-build.js": [
+      "demo.html!github:systemjs/plugin-text@0.0.4.js",
+      "demo/app.css!github:systemjs/plugin-text@0.0.4.js",
+      "demo/app.html!github:systemjs/plugin-text@0.0.4.js",
+      "demo/app.js",
+      "demo/demo-footer.html!github:systemjs/plugin-text@0.0.4.js",
+      "demo/demo-footer.js",
+      "demo/demo-nav.css!github:systemjs/plugin-text@0.0.4.js",
+      "demo/demo-nav.html!github:systemjs/plugin-text@0.0.4.js",
+      "demo/demo-nav.js",
+      "demo/main.js",
+      "demo/overview.html!github:systemjs/plugin-text@0.0.4.js",
+      "demo/overview.js",
+      "demo/semantic-prism-theme.css!github:systemjs/plugin-text@0.0.4.js"
+    ],
+    "demo/vendor-build.js": [
+      "github:Semantic-Org/Semantic-UI@2.1.8.js",
+      "github:Semantic-Org/Semantic-UI@2.1.8/semantic.css!github:systemjs/plugin-css@0.1.20.js",
+      "github:Semantic-Org/Semantic-UI@2.1.8/semantic.css!github:systemjs/plugin-text@0.0.4.js",
+      "github:Semantic-Org/Semantic-UI@2.1.8/semantic.js",
+      "github:components/jquery@2.2.1.js",
+      "github:components/jquery@2.2.1/jquery.js",
+      "npm:aurelia-animator-css@1.0.0-beta.1.1.2.js",
+      "npm:aurelia-animator-css@1.0.0-beta.1.1.2/aurelia-animator-css.js",
+      "npm:aurelia-binding@1.0.0-beta.1.2.2.js",
+      "npm:aurelia-binding@1.0.0-beta.1.2.2/aurelia-binding.js",
+      "npm:aurelia-bootstrapper@1.0.0-beta.1.1.4.js",
+      "npm:aurelia-bootstrapper@1.0.0-beta.1.1.4/aurelia-bootstrapper.js",
+      "npm:aurelia-dependency-injection@1.0.0-beta.1.1.5.js",
+      "npm:aurelia-dependency-injection@1.0.0-beta.1.1.5/aurelia-dependency-injection.js",
+      "npm:aurelia-loader@1.0.0-beta.1.1.1.js",
+      "npm:aurelia-loader@1.0.0-beta.1.1.1/aurelia-loader.js",
+      "npm:aurelia-logging@1.0.0-beta.1.1.2.js",
+      "npm:aurelia-logging@1.0.0-beta.1.1.2/aurelia-logging.js",
+      "npm:aurelia-metadata@1.0.0-beta.1.1.6.js",
+      "npm:aurelia-metadata@1.0.0-beta.1.1.6/aurelia-metadata.js",
+      "npm:aurelia-pal-browser@1.0.0-beta.1.1.4.js",
+      "npm:aurelia-pal-browser@1.0.0-beta.1.1.4/aurelia-pal-browser.js",
+      "npm:aurelia-pal@1.0.0-beta.1.1.1.js",
+      "npm:aurelia-pal@1.0.0-beta.1.1.1/aurelia-pal.js",
+      "npm:aurelia-path@1.0.0-beta.1.1.1.js",
+      "npm:aurelia-path@1.0.0-beta.1.1.1/aurelia-path.js",
+      "npm:aurelia-polyfills@1.0.0-beta.1.0.6.js",
+      "npm:aurelia-polyfills@1.0.0-beta.1.0.6/aurelia-polyfills.js",
+      "npm:aurelia-task-queue@1.0.0-beta.1.1.1.js",
+      "npm:aurelia-task-queue@1.0.0-beta.1.1.1/aurelia-task-queue.js",
+      "npm:aurelia-templating@1.0.0-beta.1.1.4.js",
+      "npm:aurelia-templating@1.0.0-beta.1.1.4/aurelia-templating.js",
+      "npm:jquery@2.2.2.js",
+      "npm:jquery@2.2.2/dist/jquery.js"
+    ]
   },
 
   map: {
@@ -22,6 +75,7 @@ System.config({
     "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.2.2",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.1.4",
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.1.5",
+    "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.1.4",
     "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1.1.2",
     "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1.1.6",
     "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.1.1",
@@ -32,7 +86,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
     "dompurify": "npm:dompurify@0.7.4",
-    "jquery": "npm:jquery@2.2.1",
+    "jquery": "npm:jquery@2.2.2",
     "moment": "npm:moment@2.12.0",
     "numeral": "npm:numeral@1.5.3",
     "prism": "npm:prismjs@1.4.1",
@@ -273,7 +327,7 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:jquery@2.2.1": {
+    "npm:jquery@2.2.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:moment@2.12.0": {
