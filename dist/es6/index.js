@@ -1,6 +1,6 @@
 "use strict";
 import 'semantic';
-import 'semantic/semantic.css!';
+
 export var VERSION = '0.0.1.dev';
 
 // Aurelia plugin hook

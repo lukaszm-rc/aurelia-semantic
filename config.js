@@ -19,6 +19,7 @@ System.config({
   bundles: {
     "demo/app-build.js": [
       "demo.html!github:systemjs/plugin-text@0.0.4.js",
+      "demo/app-build.js",
       "demo/app.css!github:systemjs/plugin-text@0.0.4.js",
       "demo/app.html!github:systemjs/plugin-text@0.0.4.js",
       "demo/app.js",
@@ -30,7 +31,8 @@ System.config({
       "demo/main.js",
       "demo/overview.html!github:systemjs/plugin-text@0.0.4.js",
       "demo/overview.js",
-      "demo/semantic-prism-theme.css!github:systemjs/plugin-text@0.0.4.js"
+      "demo/semantic-prism-theme.css!github:systemjs/plugin-text@0.0.4.js",
+      "demo/vendor-build.js"
     ],
     "demo/vendor-build.js": [
       "github:Semantic-Org/Semantic-UI@2.1.8.js",
@@ -69,7 +71,6 @@ System.config({
       "npm:jquery@2.2.2/dist/jquery.js"
     ]
   },
-
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.1.2",
     "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.2.2",
