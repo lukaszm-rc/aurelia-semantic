@@ -34,6 +34,19 @@ var config = {
 				inject: true,
 				minify: true
 			}
+		},
+		"dist/system/vendor-build": {
+			includes: [
+				'aurelia-bootstrapper',
+				'aurelia-animator-css',
+				'aurelia-*',
+				'aurelia-http-client',
+				'jquery'
+			],
+			options: {
+				inject: true,
+				minify: true
+			}
 		}
 	}
 };

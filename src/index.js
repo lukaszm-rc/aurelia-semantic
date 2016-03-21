@@ -8,6 +8,7 @@ window.getUid = (prefix) => {
 }
 
 export function configure(config) {
+    config.use("aurelia-http-client");
     config.globalResources('collections/nc-breadcrumb');
     config.globalResources('collections/nc-menu');
     config.globalResources('elements/nc-button');
