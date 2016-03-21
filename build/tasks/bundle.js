@@ -27,9 +27,8 @@ var config = {
 			includes: [
 				'aurelia-bootstrapper',
 				'aurelia-animator-css',
-				'jquery',
-				'semantic',
-				'semantic/semantic.css!text'
+				'aurelia-*',
+				'jquery'
 			],
 			options: {
 				inject: true,
