@@ -1,15 +1,18 @@
 <template>
+    <div>
+        <div show.bind="show" id.bind="_id" class="ui modal">
+            <div class="header" close.call="close($_id)"></div>
+            <div class="content">
+                <content></content>
+            </div>
+            <div class="actions">
+                <nc-button click.trigger="show()" icon.bind="buttonIcon">show</nc-button>
 
-	<div class="ui modal">
-		<div class="header">Header</div>
-		<div class="content">
-			<p></p>
-		</div>
-		<div class="actions">
-			<div class="ui approve button">Approve</div>
-			<div class="ui button">Neutral</div>
-			<div class="ui cancel button">Cancel</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <nc-button type="${_id} primary" icon.bind="buttonIcon">show</nc-button>
+    </div>
 
 </template>

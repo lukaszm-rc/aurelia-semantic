@@ -3,22 +3,27 @@ var runSequence = require('run-sequence');
 var to5 = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var paths = require('../paths');
+var plumber = require("gulp-plumber");
 var compilerOptions = require('../babel-options');
 var assign = Object.assign || require('object.assign');
 
 gulp.task('build-html-es6', function () {
 	return gulp.src(paths.html).
-		pipe(gulp.dest(paths.output + 'es6'));
+		pipe(gulp.dest(paths.output + 'system'));
 });
 
 gulp.task('build-css-es6', function () {
 	return gulp.src(paths.css).
-		pipe(gulp.dest(paths.output + 'es6'));
+		pipe(gulp.dest(paths.output + 'system'));
 });
 
 gulp.task('build-es6', function () {
-	return gulp.src(paths.source).
-	pipe(gulp.dest(paths.output + 'es6'));
+	return gulp.src(paths.source)
+		.pipe(plumber({errorHandler: console.log('Error: <%= error.message %>')}))
+		.pipe(sourcemaps.init({loadMaps: true}))
+		.pipe(to5(assign({}, compilerOptions.system())))
+		.pipe(sourcemaps.write({includeContent: false, sourceRoot: '/src'}))
+		.pipe(gulp.dest(paths.output+'system'));
 });
 
 gulp.task('build-html-commonjs', function () {
@@ -34,7 +39,7 @@ gulp.task('build-css-commonjs', function () {
 gulp.task('build-commonjs', function () {
 	return gulp.src(paths.source).
 		pipe(sourcemaps.init()).
-		pipe(to5(assign({}, compilerOptions, {modules:'common'}))).
+		pipe(to5(assign({}, compilerOptions.commonjs()))).
 		pipe(sourcemaps.write()).
 		pipe(gulp.dest(paths.output + 'commonjs'));
 });
@@ -52,7 +57,7 @@ gulp.task('build-css-amd', function () {
 gulp.task('build-amd', function () {
 	return gulp.src(paths.source).
 		pipe(sourcemaps.init()).
-		pipe(to5(assign({}, compilerOptions, {modules:'amd'}))).
+		pipe(to5(assign({}, compilerOptions.amd()))).
 		pipe(sourcemaps.write()).
 		pipe(gulp.dest(paths.output + 'amd'));
 });
@@ -70,7 +75,7 @@ gulp.task('build-css-system', function () {
 gulp.task('build-system', ['build-html-system'], function () {
 	return gulp.src(paths.source).
 		pipe(sourcemaps.init()).
-		pipe(to5(assign({}, compilerOptions, {modules:'system'}))).
+		pipe(to5(assign({}, compilerOptions.system()))).
 		pipe(sourcemaps.write()).
 		pipe(gulp.dest(paths.output + 'system'));
 });
@@ -88,7 +93,7 @@ gulp.task('build-css-demo', function () {
 gulp.task('build-demo', function () {
 	return gulp.src(paths.demoSource).
 		pipe(sourcemaps.init()).
-		pipe(to5(assign({}, compilerOptions, {modules:'system'}))).
+		pipe(to5(assign({}, compilerOptions.system()))).
 		pipe(sourcemaps.write()).
 		pipe(gulp.dest(paths.output + 'demo'));
 });

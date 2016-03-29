@@ -1,7 +1,8 @@
 "use strict";
-import {inject, customElement,containerless, bindable} from 'aurelia-framework';
+import {customElement, containerless, bindable, inject} from 'aurelia-framework';
 @customElement('nc-button')
 @containerless()
+@inject(Element)
 export class NcButton {
     @bindable type = null;
     @bindable size = null;
@@ -9,11 +10,28 @@ export class NcButton {
     @bindable state = null;
     @bindable variations = null;
     @bindable preset = null;
-    @bindable click;
-    constructor() {
-        this.click = this.defaultClick;
+    @bindable className = null;
+    @bindable click = this.defaultClick;
+
+    constructor(element) {
+        this.element = element;
     }
+
     defaultClick(event) {
+        if (event) {
             console.log(event);
+        }
+    }
+
+    propertyChanged(property, oldValue, newValue) {
+        if (property === "icon") {
+            this.icon = newValue;
+            this.className = "icon";
+        }
+        this.property = newValue;
+        console.log(property + newValue);
+    }
+
+    attached() {
     }
 }

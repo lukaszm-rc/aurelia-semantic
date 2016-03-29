@@ -6,7 +6,6 @@
  */
 
 import {inject, customElement, bindable, containerless} from 'aurelia-framework';
-import $ from 'jquery';
 
 @customElement('nc-header')
 @containerless()

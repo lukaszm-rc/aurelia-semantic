@@ -1,5 +1,5 @@
 import {inject, customElement, containerless, bindable} from 'aurelia-framework';
-import $ from 'semantic-ui';
+
 @customElement('nc-rating')
 @inject(Element)
 @containerless()

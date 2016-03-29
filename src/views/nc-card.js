@@ -6,7 +6,6 @@
  */
 
 import {inject, customElement, useView, containerless, bindable} from 'aurelia-framework';
-import $ from 'jquery';
 
 @customElement( 'nc-card' )
 @inject( Element )

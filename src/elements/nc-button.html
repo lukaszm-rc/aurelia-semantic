@@ -1,6 +1,8 @@
 <template>
-    <button class="ui ${variations} ${type} ${state} ${size} button" click.delegate="click($event)">
-        <nc-icon if.bind="icon" name.bind="icon"></nc-icon>
+    <button class="ui ${variations} {$className} ${type} ${state} ${size} button" click.trigger="click($event)">
+        <template if.bind="icon">
+            <nc-icon name.bind="icon"></nc-icon>
+        </template>
         <content></content>
     </button>
 </template>
