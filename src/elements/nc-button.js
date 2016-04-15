@@ -29,7 +29,7 @@ export class NcButton {
             this.className = "icon";
         }
         this.property = newValue;
-        console.log(property + newValue);
+
     }
 
     attached() {

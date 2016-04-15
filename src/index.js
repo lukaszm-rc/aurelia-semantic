@@ -1,6 +1,7 @@
 "use strict";
-import {Aurelia} from 'aurelia-framework';
-import {ConfigBuilder} from './config-builder';
+import {ConfigBuilder} from './config-builder.js';
+import 'jquery';
+import 'semantic';
 
 export var VERSION = '0.0.5.dev';
 // Aurelia plugin hook

@@ -1,8 +1,8 @@
 import {customElement, bindable, inject, containerless} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
-
+import $ from 'semantic';
 @customElement("nc-modal")
-@inject(EventAggregator)
+@inject(EventAggregator,$)
 @containerless()
 export class NcModal {
     @bindable _id;
@@ -14,7 +14,8 @@ export class NcModal {
     @bindable buttonIcon = '';
     @bindable show = this.onShow;
 
-    constructor(EventAggregator) {
+    constructor(EventAggregator,semanticjs) {
+        this.semanticjs = semanticjs;
         this._id = getUid('modal');
         this.eventAggregator = EventAggregator;
     }

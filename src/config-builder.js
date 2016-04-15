@@ -2,12 +2,9 @@
  * Plugin configuration builder
  */
 export class ConfigBuilder {
-   useGlobalResources = true;
-    globalResources = [];
-
     constructor() {
         this.globalResources = [];
-        return this.useAll();
+        this.useAll();
     }
 
     useAll() {
@@ -23,8 +20,6 @@ export class ConfigBuilder {
         this.globalResources.push('./elements/nc-segments');
         this.globalResources.push('./modules/nc-modal');
         this.globalResources.push('./views/nc-card');
-        console.info(this);
-        return this;
     }
 
 
